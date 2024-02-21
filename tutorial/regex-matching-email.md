@@ -14,7 +14,6 @@
 * [Bracket Expressions](#bracket-expressions)
 * [Character Classes](#character-classes)
 * [Character Escapes](#character-escapes)
-* [Email Validation Conclusion](#email-validation-conclusion)
 * [Author](#author)
 
 ## Anchors
@@ -90,4 +89,12 @@ Escape sequences, consisting of characters that cannot be directly typed or repr
 
 Character escapes play a vital role in ensuring the accurate matching of text patterns by interpreting special characters as literals. They are instrumental in suppressing the special meanings of metacharacters and representing characters that cannot be directly typed. As a result, they contribute to the reliable validation of email addresses through the proper functioning of regex expressions
 
+## Author
+Follow me on Github at [Travis Shanhun](https://github.com/RaszeroT). Additional questions or concerns? feel free to contact me at shanhun.codes@gmail.com
 
+
+**Deployed GitHub-Gist Link:**
+[Click Here](https://gist.github.com/RaszeroT/3ea35329b82917bb669d617fae46e97e)
+
+**GitHub Repository:**
+[Click Here](https://github.com/raszerot/Regex-Tutorial-Travis-Shanhun)
