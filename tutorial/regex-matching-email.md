@@ -63,7 +63,11 @@ To begin with, the 'Local-Part' `([a-z0-9_\.-]+)` is responsible for matching th
 ## Bracket Expressions
 Square brackets, denoted as `[]`, are employed to specify a group of characters that can be matched at a particular position within a text string. Any character enclosed within these brackets is considered part of the permissible set. Bracket expressions can encompass individual characters and can also define character ranges using a hyphen `-`, for instance, `a-z` to represent all lowercase letters or `0-9` to denote digits.
 
-##
+## Character Classes
+Character classes, also referred to as character sets, are brief and more succinct representations in regular expressions that depict specific sets of characters. By utilizing character classes, you can streamline and abbreviate regular expression patterns.
+
+Our regular expression(regex) `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` incorporates a range of regex elements, such as `character classes`, `character sets`, `metacharacters`, and `repeating character classes`. These elements are essential for the accurate assessment and matching of email addresses.
+
 ##
 ##
 ##
