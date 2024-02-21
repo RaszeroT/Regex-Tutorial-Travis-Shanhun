@@ -31,6 +31,20 @@ These two anchors insure that the user is able to select where the start and the
 * `^hello` will match anything that leads will hello but nothing that comes before. `hello` - valid, `hello world` - valid, `say hello` - invalid
 * `hello$` will match anything that ends with hello but nothing that comes afterward. `hello` - valid, `hello world` - invalid, `say hello`- valid
 
+## Quantifiers
+Quantifiers in regular expressions define the frequency with which a pattern should appear, and they are positioned right after the pattern they modify.
+
+The `+` quantifier, indicating "at least one occurrence," is applied to the pattern `[a-z0-9_\.-]` within the first capture group `([a-z0-9_\.-]+)`. This setup means that the pattern `[a-z0-9_\.-]` must appear at least once but can also appear several times in a row. Consequently, this group can capture a sequence consisting of one or more lowercase letters, digits, underscores, dots, or hyphens.
+
+
+In a similar manner, the `+` quantifier follows the pattern `[\da-z\.-]` in the second capture group `([\da-z\.-]+)`, enabling this group to match sequences of one or more digits, lowercase letters, dots, or hyphens.
+
+
+The quantifier `{2,6}` is applied to the character set `[a-z\.]` in the third capture group `([a-z\.]{2,6})`, allowing this group to match sequences of 2 to 6 lowercase letters or dots. This quantifier range is crucial for matching email addresses that conclude with a top-level domain of two to six letters in length, such as .au .com, .net, .info, or .co.uk.
+
+
+When combined, the regular expression `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` is crafted to identify valid email addresses. It looks for an initial segment of one or more lowercase letters, digits, underscores, dots, or hyphens, followed by the `@` symbol. This is then followed by a segment of one or more digits, lowercase letters, dots, or hyphens, and finally, a period followed by a top-level domain consisting of two to six letters, effectively capturing the structure of a standard email address.
+
 ##
 ##
 ##
