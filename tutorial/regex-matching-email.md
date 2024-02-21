@@ -59,6 +59,10 @@ The regular expression we are examining in this explanation: `/^([a-z0-9_\.-]+)@
 
 To begin with, the 'Local-Part' `([a-z0-9_\.-]+)` is responsible for matching the user's identifier in the email address. Next, the 'Domain' `([\da-z\.-]+)` matches the domain name of the email. Lastly, the 'Top-Level Domain' `([a-z\.]{2,6})` matches the final segment of the email address, the top-level domain.
 
+
+## Bracket Expressions
+Square brackets, denoted as `[]`, are employed to specify a group of characters that can be matched at a particular position within a text string. Any character enclosed within these brackets is considered part of the permissible set. Bracket expressions can encompass individual characters and can also define character ranges using a hyphen `-`, for instance, `a-z` to represent all lowercase letters or `0-9` to denote digits.
+
 ##
 ##
 ##
