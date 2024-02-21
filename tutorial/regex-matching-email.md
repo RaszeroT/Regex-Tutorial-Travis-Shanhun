@@ -20,8 +20,16 @@
 * [Author](#author)
 
 ## Anchors
+**Anchors come in two types:**
+* Start Anchor `^`: This insures the start of the string is correct.
+* End Anchor `$`: This insures the end of the string is correct.
 
+These two anchors insure that the user is able to select where the start and the end of the string **must** end. 
 
+**Example**
+* `^hello$` will match nothing else but hello. Nothing leading and nothing following. `hello` - valid, `hello world` - invalid, `say hello`- invalid
+* `^hello` will match anything that leads will hello but nothing that comes before. `hello` - valid, `hello world` - valid, `say hello` - invalid
+* `hello$` will match anything that ends with hello but nothing that comes afterward. `hello` - valid, `hello world` - invalid, `say hello`- valid
 
 ##
 ##
