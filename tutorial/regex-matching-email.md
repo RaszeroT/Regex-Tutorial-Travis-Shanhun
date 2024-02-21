@@ -13,8 +13,6 @@
 * [Grouping Constructs](#grouping-constructs)
 * [Bracket Expressions](#bracket-expressions)
 * [Character Classes](#character-classes)
-* [The OR Operator](#the-or-operator)
-* [Flags](#flags)
 * [Character Escapes](#character-escapes)
 * [Email Validation Conclusion](#email-validation-conclusion)
 * [Author](#author)
@@ -68,9 +66,19 @@ Character classes, also referred to as character sets, are brief and more succin
 
 Our regular expression(regex) `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` incorporates a range of regex elements, such as `character classes`, `character sets`, `metacharacters`, and `repeating character classes`. These elements are essential for the accurate assessment and matching of email addresses.
 
-##
-##
-##
+### Character Classes and Character Sets:
+The provided email regex utilizes the core character class: `\d` and `..` Character sets are enclosed within square brackets, for example `[a-z]`, , and `[.-]`. These sets represent multiple characters, enabling a single character match from the defined range.
+
+The provided regex pattern is designed to match a solitary alphanumeric character, which may consist of an uppercase letter, a lowercase letter, or a digit. The character class `\d` is responsible for matching a digit, whereas the character sets `[a-z]` and `[A-Z]` are utilized to match lowercase and uppercase letters, correspondingly. Through the amalgamation of these character sets within square brackets, the pattern is formulated to effectively match any single alphanumeric character.
+
+## Metacharacters Inside Character Classes:
+Metacharacters in regex are special characters, such as the dot `(.)`, that hold particular meanings. When inside character classes, some metacharacters lose their special significance and are interpreted as literal characters. In the provided email regex, the hyphen `(-)` and the dot `(.)` are metacharacters enclosed within character classes `[a-z0-9_.-]` and `[\da-z.-]`. The dot `(.)` does not require escaping with a backslash, and the hyphen is utilized as a literal character without the need for escaping, given its placement at the beginning or end of the character set.
+
+This regex pattern is designed to match a single digit, an uppercase letter, a lowercase letter, a literal period `(.)`, a comma `(,)`, or a hyphen `(-)`. The character classes `\d`, `[A-Z]`, and `[a-z]` correspond to digits, uppercase letters, and lowercase letters, respectively. The metacharacters `.` and `-` are integrated within the character class as literal characters, devoid of any special interpretation, due to their placement inside the class. The hyphen `(-)` is also used as a literal character without requiring an escape sequence, as it is positioned at the outset or conclusion of the character set.
+
+## Repeating Character Classes:
+The email regex makes use of the `+` and `{2,6}` quantifiers to signify repeating character classes, as previously explained. The plus sign `(+)` is employed to match one or more occurrences of the preceding character class or set, as evidenced in `[a-z0-9_.-]+` and `[\da-z.-]+`. Subsequently, the curly braces `({2,6})` establish a specific range of repetitions for the preceding character class or set, as demonstrated in `[a-z.]{2,6}`, which corresponds to 2 to 6 occurrences of lowercase letters or the literal period (dot) characters.
+
 ##
 ##
 
